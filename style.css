@@ -190,6 +190,7 @@ p{
 
 /* End of animations */
 
+
 /* Navbar styling */
 .header{
     position: fixed;
@@ -257,6 +258,56 @@ header {
 
 /* End of navbar styling */
 
+/* Hero Styling */
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero .greeting{
+    font-size: 1.5rem;
+    color: var(--green);
+}
+
+.name-title{
+    font-size: var(--font-size-lg);
+    color: var(--lightest-slate);
+}
+
+.role-title{
+    font-size: var(--font-size-md);
+    color: var(--light-slate);
+}
+
+.hero-paragraph{
+    max-width: 100%;
+}
+/* End of hero styling */
+
+/* About Styling */
+.about-content{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+}
+
+.about-image{
+    position: relative;
+    max-width: 5em;
+}
+
+.about-image-resize{
+    display: block;
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* End of about styling */
+
 
 /* BREAKPOINTS */
 @media (max-width: 992px) {
@@ -312,6 +363,29 @@ header {
         opacity: 1;
     }
 
-  
+    /* Hero section */
+    .hero{
+        justify-content: start;
+        padding-top: 3em;
+        margin-bottom: -2em;
+    }
+
+    .hero-paragraph{
+        max-width: 100%;
+    }
+    /* End of hero section */
+
+    /* About section */
+     .about-content {
+        display: flex;
+        flex-direction: column; 
+        gap: 20px; 
+    }
+
+
+    .about-image-resize {
+        max-width: 100%;
+    }
+    /* End of about section */
 
 }
