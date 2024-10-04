@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("in-view");
-          observer.unobserve(entry.target); 
+          observer.unobserve(entry.target); // Stop observing once animated
         }
       });
     },
     {
-      threshold: 0.1, 
+      threshold: 0.1, // Trigger when 10% of the element is visible
     }
   );
 
@@ -58,9 +58,10 @@ window.addEventListener("load", function () {
   heroElements.forEach(function (element) {
     element.classList.add("animate-hero");
 
+    // Ensure the animation class gets activated after load
     setTimeout(() => {
       element.classList.add("in-view");
-    }, 100); 
+    }, 100); // Slight delay to trigger the animation smoothly
   });
 });
 
@@ -93,4 +94,35 @@ function checkInputs() {
   }
 }
 
+function checkEmail() {
+  const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+  const errorTxtEmail = document.querySelector(".error-txt.email");
 
+  if (!email.value.match(emailRegex)) {
+    email.classList.add("error");
+    email.parentElement.classList.add("error");
+
+    if (email.value != "") {
+      errorTxtEmail.innerText = "Enter a valid email address";
+    } else {
+      errorTxtEmail = "Email required";
+    }
+  } else {
+    email.classList.remove("error");
+    email.parentElement.classList.remove("error");
+  }
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  checkInputs();
+
+  if (
+    !name.classList.contains("error") &&
+    !email.classList.contains("error") &&
+    !message.classList.contains("error")
+  ) {
+    form.reset();
+    return false;
+  }
+});

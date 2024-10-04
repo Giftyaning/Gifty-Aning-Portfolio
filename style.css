@@ -176,4 +176,142 @@ p{
     animation-delay: 1s;
 }
 
-/* End of hero section animation */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* End of animations */
+
+/* Navbar styling */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em 10%;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: 0 2px 10px var(--lightest-navy);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo{
+    color: var(--green);
+    font-weight: var(--font-weight-lg);
+    font-size: 1.5em;
+}
+
+.navbar a{
+    color: var(--lightest-slate);
+    margin-left: 2em;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--green);
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    cursor: pointer;
+    display: none;
+    color: var(--green);
+}
+
+.icons #close-icon{
+    display: none;
+}
+
+/* End of navbar styling */
+
+
+/* BREAKPOINTS */
+@media (max-width: 992px) {
+    .header{
+        padding: 1.3em 5%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(2em);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease-in-out;
+    }
+
+    #check:checked~.navbar{
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5em 0;
+        text-align: center;
+        transform: translateY(-50px);
+        transition: .3s ease-in-out;
+        opacity: 0;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        transition-delay: calc(.15s * var(--i));
+        opacity: 1;
+    }
+
+  
+
+}
