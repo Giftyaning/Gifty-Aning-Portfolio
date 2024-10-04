@@ -1,131 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <title>Gifty Aning</title>
-</head>
-<body>
-   <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">Gifty Aning</a>
-                <a href="#" class="mobile-logo">G</a>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">Gifty</a>
 
-                <input type="checkbox" id="check">
+        <input type="checkbox" id="check" />
 
-                <label for="check" class="icons" onclick="toggleMenu()">
-                    <i class='bx bx-menu' id="menu-icon"></i>
-                    <i class='bx bx-x' id="close-icon"></i>
-                </label>
+        <label for="check" class="icons">
+          <i class="bx bx-menu" id="menu-icon"></i>
+          <i class="bx bx-x" id="close-icon"></i>
+        </label>
 
-                
-                <ul class="nav-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="navbar">
+          <a href="#home" class="active" style="--i: 0">Home</a>
+          <a href="#about" style="--i: 1">About</a>
+          <a href="#projects" style="--i: 2">Projects</a>
+          <a href="#contact" style="--i: 3">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <div class="container">
+      <section class="hero" id="home">
+        <h5 class="greeting">Hello 👋🏾, my name is</h5>
+        <div class="name-title">Gifty Aning</div>
+        <div class="role-title">UI/UX Designer & Front-end Developer</div>
+        <p class="hero-paragraph">
+          I specialize in crafting thoughtful, user-focused designs and writing
+          clean code. Currently, I'm dedicated to building accessible, engaging
+          digital products.
+        </p>
 
-        
-        <section class="hero" id="home">
-            <div class="hero-intro">Hello 👋🏾. my name is</div>
-            <div class="hero-name">Gifty Aning</div>
-            <div class="hero-role">UI/UX Designer & Front-end Developer</div>
-            <div class="hero-paragraph">
-                I specialize in crafting thoughtful, 
-                user-focused designs and writing clean code. Currently, 
-                I'm dedicated to building accessible, engaging digital 
-                products.
+        <button class="hero-button">
+          <a href="#contact">Say Hello</a>
+        </button>
+      </section>
+      
+
+      <section id="about" class="animate-on-scroll">
+        <div class="section-title">
+          <h3>Hi, I'm Gifty. Nice to meet you</h3>
+        </div>
+
+        <div class="about-content">
+            <div class="about-profile">
+                <p class="paragraph">
+                    As a self-taught developer, I've immersed myself 
+                    in the world of design and development, constantly 
+                    learning and growing along the way. My goal is to bridge 
+                    the gap between form and function, ensuring that every project 
+                    I work on is not only beautiful but also user-friendly. With a 
+                    deep enthusiasm for creativity, I'm always excited to bring ideas 
+                    to life and craft seamless, engaging experiences for users.
+                </p>
+                <button class="cv">
+                  <a href="#">My CV</a>
+                </button>
             </div>
-            <button class="hero">Say Hello</button>
-        </section>
-
-        <section class="about animate-on-scroll" id="about">
-            <div class="section-heading">Hi, I'm Gifty. Nice to meet you</div>
-
-            <div class="about-content">
-                <div class="about-description">
-                    <div class="about-paragraph">
-                        As a self-taught developer, I've immersed myself 
-                        in the world of design and development, constantly 
-                        learning and growing along the way. My goal is to bridge 
-                        the gap between form and function, ensuring that every project 
-                        I work on is not only beautiful but also user-friendly. With a 
-                        deep enthusiasm for creativity, I'm always excited to bring ideas 
-                        to life and craft seamless, engaging experiences for users.
-                    </div>
-                    <button class="cv">My CV</button>
-                </div>
-                <div class="about-image">
-                    <img src="" alt="Me">
-                </div>
+            <div class="about-image">
+                <img src="Images/girl-coding.png" alt="">
             </div>
-        </section>
+        </div>
+      </section>
+      
+      <section id="projects" class="animate-on-scroll">
+        <div class="section-title">
+          <h3>Some projects I've worked on</h3>
+        </div>
 
-        <section class="project animate-on-scroll" id="projects">
-            <div class="section-heading">Some projects I've worked on</div>
-
-            <ul class="project-list">
-                <li class="project-image">
-                    <img src="" alt="">
-                    <div class="project-details">
-                        <div class="title">Project title</div>
-                        <div class="project-desctiption">Project description</div>
-                        <div class="technologies">Technologies used</div>
-                        <div class="project-viewing">view project</div>
-                    </div>
+        <ul class="project-list">
+          <li class="project-image-left project">
+            <img src="" alt="">
+            <div class="project-left-details project-details">
+              <div class="project-title">
+                <a href="#">Project title</a>
+              </div>
+              <div class="project-description">
+                Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. 
+              </div>
+              <ul class="project-tech">
+                <li>Html</li>
+                <li>CSS</li>
+              </ul>
+              <ul class="project-links">
+                <li class="live-site">
+                  <a href="">
+                    <i class='bx bx-link-external' ></i>
+                  </a>
                 </li>
-
-                <li class="project-image">
-                    <img src="" alt="">
-                    <div class="project-details">
-                        <div class="title">Project title</div>
-                        <div class="project-desctiption">Project description</div>
-                        <div class="technologies">Technologies used</div>
-                        <div class="project-viewing">view project</div>
-                    </div>
+                <li class="github">
+                  <a href="">
+                    <i class='bx bxl-github'></i>
+                  </a>
                 </li>
-            </ul>
-        </section>
+              </ul>
+            </div>
+          </li>
+          
+          <li class="project-image-right project">
+            <img src="" alt="">
+            <div class="project-right-details project-details">
+              <div class="project-title">
+                <a href="#">Project title</a>
+              </div>
+              <div class="project-description">
+                Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. 
+              </div>
+              <ul class="project-tech">
+                <li>Html</li>
+                <li>CSS</li>
+              </ul>
+              <ul class="project-links">
+                <li class="live-site">
+                  <a href="">
+                    <i class='bx bx-link-external' ></i>
+                  </a>
+                </li>
+                <li class="github">
+                  <a href="">
+                    <i class='bx bxl-github'></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </section>
+      
+      <section class="contact animate-on-scroll" id="contact">
+        <div class="section-title">
+          <h3>Get In Touch</h3>
+        </div>
 
-        <section class="contact">
-            <h2>Contact Me</h2>
+        <p class="section-paragraph">
+          Feel free to reach out! Whether you have a project in mind or just
+          want to say hello, I'd love to connect.
+        </p>
 
-            <form action="#">
-                <div class="input-box">
-                    <div class="input-field field">
-                        <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
-                        <div class="error-txt">Name required</div>
-                    </div>
-                    
-                    <div class="input-field field">
-                        <input type="text" placeholder="Email" id="email" class="item" autocomplete="off">
-                        <div class="error-txt email">Email required</div>
-                    </div>
-                </div>
+        <form action="#">
+          <div class="input-box">
+            <div class="input-field field">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                placeholder="Full Name"
+                id="name"
+                class="item"
+                autocomplete="off"
+              />
+              <div class="error-txt">Name required</div>
+            </div>
 
-                <div class="textarea-field field">
-                    <textarea name="" class="item" id="message" cols="30" rows="10" placeholder="Message" autocomplete="off"></textarea>
-                    <div class="error-txt">Message required</div>
-                </div>
+            <div class="input-field field">
+              <label for="email">Email Address</label>
+              <input
+                type="text"
+                placeholder="Email"
+                id="email"
+                class="item"
+                autocomplete="off"
+              />
+              <div class="error-txt email">Email required</div>
+            </div>
+          </div>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+          <div class="textarea-field field">
+            <label for="text">Message</label>
+            <textarea
+              name=""
+              class="item"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Type your message here"
+              autocomplete="off"
+            ></textarea>
+            <div class="error-txt">Message required</div>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </div>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="index.js"></script>
-   
-
-</body>
+  </body>
 </html>
