@@ -35,6 +35,10 @@ html{
     --pink: #f57dff;
     --blue: #57cbff;
     --error-txt: #d93025;
+
+    --font-size-lg: clamp(3rem, 8vw, 7rem);
+    --font-size-md: clamp(2rem, 5vw, 4rem);
+    --font-weight-lg: 600;
     
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
     --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
@@ -122,3 +126,54 @@ p{
     font-size: clamp(.3rem, 3vw, 1.2rem);
     color: var(--slate);
 }
+
+/*End of general styling */
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+/* Initially hide elements */
+.greeting,
+.name-title,
+.role-title,
+.hero-paragraph,
+.hero-button {
+    opacity: 0; /* Initially hidden */
+}
+
+/* Apply fadeIn animation with a staggered effect */
+.greeting.animate-hero {
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.name-title.animate-hero {
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.role-title.animate-hero {
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.hero-paragraph.animate-hero {
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.hero-button.animate-hero {
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+/* End of hero section animation */
