@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Gifty Aning</title>
+</head>
+<body>
+   <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Gifty Aning</a>
+                <a href="#" class="mobile-logo">G</a>
+
+                <input type="checkbox" id="check">
+
+                <label for="check" class="icons" onclick="toggleMenu()">
+                    <i class='bx bx-menu' id="menu-icon"></i>
+                    <i class='bx bx-x' id="close-icon"></i>
+                </label>
+
+                
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        
+        <section class="hero" id="home">
+            <div class="hero-intro">Hello 👋🏾. my name is</div>
+            <div class="hero-name">Gifty Aning</div>
+            <div class="hero-role">UI/UX Designer & Front-end Developer</div>
+            <div class="hero-paragraph">
+                I specialize in crafting thoughtful, 
+                user-focused designs and writing clean code. Currently, 
+                I'm dedicated to building accessible, engaging digital 
+                products.
+            </div>
+            <button class="hero">Say Hello</button>
+        </section>
+
+        <section class="about animate-on-scroll" id="about">
+            <div class="section-heading">Hi, I'm Gifty. Nice to meet you</div>
+
+            <div class="about-content">
+                <div class="about-description">
+                    <div class="about-paragraph">
+                        As a self-taught developer, I've immersed myself 
+                        in the world of design and development, constantly 
+                        learning and growing along the way. My goal is to bridge 
+                        the gap between form and function, ensuring that every project 
+                        I work on is not only beautiful but also user-friendly. With a 
+                        deep enthusiasm for creativity, I'm always excited to bring ideas 
+                        to life and craft seamless, engaging experiences for users.
+                    </div>
+                    <button class="cv">My CV</button>
+                </div>
+                <div class="about-image">
+                    <img src="" alt="Me">
+                </div>
+            </div>
+        </section>
+
+        <section class="project animate-on-scroll" id="projects">
+            <div class="section-heading">Some projects I've worked on</div>
+
+            <ul class="project-list">
+                <li class="project-image">
+                    <img src="" alt="">
+                    <div class="project-details">
+                        <div class="title">Project title</div>
+                        <div class="project-desctiption">Project description</div>
+                        <div class="technologies">Technologies used</div>
+                        <div class="project-viewing">view project</div>
+                    </div>
+                </li>
+
+                <li class="project-image">
+                    <img src="" alt="">
+                    <div class="project-details">
+                        <div class="title">Project title</div>
+                        <div class="project-desctiption">Project description</div>
+                        <div class="technologies">Technologies used</div>
+                        <div class="project-viewing">view project</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Me</h2>
+
+            <form action="#">
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                        <div class="error-txt">Name required</div>
+                    </div>
+                    
+                    <div class="input-field field">
+                        <input type="text" placeholder="Email" id="email" class="item" autocomplete="off">
+                        <div class="error-txt email">Email required</div>
+                    </div>
+                </div>
+
+                <div class="textarea-field field">
+                    <textarea name="" class="item" id="message" cols="30" rows="10" placeholder="Message" autocomplete="off"></textarea>
+                    <div class="error-txt">Message required</div>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+   
+
+</body>
+</html>
