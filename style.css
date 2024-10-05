@@ -5,6 +5,7 @@
     list-style-type: none;
     text-decoration: none;
     scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
 }
 
 body{
@@ -303,10 +304,112 @@ header {
     width: 100%;
     object-fit: cover;
 }
-
-
-
 /* End of about styling */
+
+/* Projects Styling */
+.project-list {
+    display: block;
+    margin-top: 1em
+}
+
+.project {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.project-content{
+    position: relative;
+    grid-area: 1 / 1 / -1 / 7;
+}
+
+.project-image-container{
+    grid-area: 1 / 6 / -1 / -1;
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--green);
+    padding: 1em;
+}
+
+.image-link{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+}
+
+.image-link img{
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project:nth-child(even) .project-content {
+    grid-column: 1 / 7; 
+    text-align: left; 
+    justify-self: start; 
+}
+
+.project:nth-child(even) .project-links{
+    justify-content: start;
+}
+
+
+
+.project:nth-child(even) .project-image-container {
+    grid-column: 7 / -1; 
+    border: 1px solid var(--green);
+    padding: 1em;
+}
+
+
+.project:nth-child(odd) .project-content {
+    grid-column: 7 / -1; 
+    text-align: right; 
+    justify-self: end;
+}
+
+.project:nth-child(odd) .project-image-container {
+    grid-column: 1 / 7; 
+    border: 1px solid var(--green);
+    padding: 1em;
+}
+
+.project:nth-child(odd) .project-tech, .project-links{
+    justify-content: end;
+}
+
+.project-title {
+    font-size: var(--fz-lg);
+    color: var(--lightest-slate);
+}
+
+.project-title{
+    font-size: var(--fz-lg);
+    color: var(--lightest-slate);
+}
+.project-tech, .project-links{
+    font-size: var(--fz-lg);
+    color: var(--light-slate);
+    display: flex;
+    gap: 1.2em;
+}
+/* End of projects styling */
+
+
 
 
 /* BREAKPOINTS */
@@ -387,5 +490,34 @@ header {
         max-width: 100%;
     }
     /* End of about section */
+
+    /* Projects section */
+    .project-list{
+        width: 100%;
+    }
+    .project {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;    
+        text-align: center; 
+        width: 100%;
+    }
+
+   
+    .project-image-container {
+        order: 1;
+        width: 100%;
+    }
+
+   
+    .project-content {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* End of projects section */
+
 
 }
