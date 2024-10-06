@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +14,7 @@ body{
     min-height: 100vh;
     background-color: var(--dark-navy);
     line-height: 1.5;
+    font-family: var(--font-sans);
 }
 
 html{
@@ -268,6 +271,7 @@ header {
 .hero .greeting{
     font-size: 1.5rem;
     color: var(--green);
+    font-family: var(--font-mono);
 }
 
 .name-title{
@@ -665,7 +669,7 @@ form button{
     }
 
     .tech-skills {
-        grid-template-columns: 1fr; /* Stack items on smaller screens */
+        grid-template-columns: 1fr; 
     }
     /* End of about section */
 
