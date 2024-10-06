@@ -361,7 +361,6 @@ header {
     grid-area: 1 / 6 / -1 / -1;
     position: relative;
     z-index: 1;
-    border: 1px solid var(--green);
     padding: 1em;
 }
 
@@ -402,7 +401,6 @@ header {
 
 .project:nth-child(even) .project-image-container {
     grid-column: 7 / -1; 
-    border: 1px solid var(--green);
     padding: 1em;
 }
 
@@ -415,7 +413,6 @@ header {
 
 .project:nth-child(odd) .project-image-container {
     grid-column: 1 / 7; 
-    border: 1px solid var(--green);
     padding: 1em;
 }
 
@@ -426,12 +423,13 @@ header {
 .project-title {
     font-size: var(--fz-lg);
     color: var(--lightest-slate);
+    margin-bottom: .5em;
 }
 
-.project-title{
-    font-size: var(--fz-lg);
-    color: var(--lightest-slate);
+.project-tech{
+    margin-bottom: .5em;
 }
+
 .project-tech, .project-links{
     font-size: var(--fz-lg);
     color: var(--light-slate);
@@ -537,7 +535,45 @@ form button{
 }
 
 
+.popup-modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+}
 
+.popup-content {
+  background-color: var(--light-navy);
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid var(--green);
+  width: 80%; 
+  text-align: center;
+  color: var(--light-slate);
+}
+
+.bx-check{
+    color: var(--green);
+}
+
+.close-popup {
+  color: var(--green);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+  color: var(--error-txt);
+  text-decoration: none;
+  cursor: pointer;
+}
 
 
 

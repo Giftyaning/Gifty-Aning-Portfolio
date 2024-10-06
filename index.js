@@ -8,7 +8,6 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
 
-
 window.onscroll = () => {
   const top = window.scrollY;
 
@@ -75,34 +74,44 @@ function sendEmail() {
     Body: bodyMessage,
   }).then((response) => {
     if (response === "OK") {
-      // Show the popup modal
-      document.getElementById("popupModal").style.display = "block";
+      const popupModal = document.getElementById("popupModal");
+      popupModal.style.display = "block";
+
+      
+      const closePopupButton = document.getElementById("close-pop");
+      closePopupButton.onclick = () => {
+        popupModal.style.display = "none"; 
+      };
     } else {
       alert(`Failed to send email: ${response}`);
     }
   });
-
-  // Close the popup when the close button is clicked
-  document.getElementById("closePopup").onclick = () => {
-    document.getElementById("popupModal").style.display = "none";
-  };
 }
 
 // Check input fields for errors
 function checkInputs() {
+  let isValid = true;
   const inputs = [nameInput, emailInput, messageInput];
 
   inputs.forEach((input) => {
+    const errorTxt = input.parentElement.querySelector(".error-txt");
     if (input.value.trim() === "") {
       input.classList.add("error");
       input.parentElement.classList.add("error");
+      errorTxt.style.display = "block"; 
+      isValid = false; 
     } else {
       input.classList.remove("error");
       input.parentElement.classList.remove("error");
+      errorTxt.style.display = "none"; 
     }
   });
 
-  checkEmail();
+  if (!checkEmail()) {
+    isValid = false; 
+  }
+
+  return isValid; 
 }
 
 // Validate email format
@@ -113,32 +122,36 @@ function checkEmail() {
   if (!emailInput.value.match(emailRegex)) {
     emailInput.classList.add("error");
     emailInput.parentElement.classList.add("error");
-
     errorTxtEmail.innerText =
       emailInput.value === ""
         ? "Email required"
         : "Enter a valid email address";
+    errorTxtEmail.style.display = "block"; 
+    return false; 
   } else {
     emailInput.classList.remove("error");
     emailInput.parentElement.classList.remove("error");
-    errorTxtEmail.innerText = ""; 
+    errorTxtEmail.innerText = "";
+    errorTxtEmail.style.display = "none";
+    return true; 
   }
 }
 
 // Handle form submission
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  checkInputs();
+  e.preventDefault(); 
 
-  const hasError = Array.from(form.querySelectorAll(".error")).length > 0;
-
-  if (!hasError) {
-    sendEmail(); 
+  if (checkInputs()) {
+    sendEmail();
     form.reset();
   }
 });
 
-// Event listeners for real-time validation
-nameInput.addEventListener("keyup", () => checkInputs());
-emailInput.addEventListener("keyup", () => checkInputs());
-messageInput.addEventListener("keyup", () => checkInputs());
+// Close popup on button click
+const closePopupButton = document.getElementById("close-pop");
+if (closePopupButton) {
+  closePopupButton.addEventListener("click", (e) => {
+    e.preventDefault(); 
+    document.getElementById("popupModal").style.display = "none"; 
+  });
+}

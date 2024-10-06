@@ -205,8 +205,8 @@
               cols="30"
               rows="10"
               placeholder="Type your message here"
-              autocomplete="off"
-            ></textarea>
+              autocomplete="off">
+            </textarea>
             <div class="error-txt">Message required</div>
           </div>
 
@@ -214,6 +214,19 @@
         
 
           <button type="submit">Send Message</button>
+
+          <div id="popupModal" class="popup-modal">
+            <div class="popup-content">
+              <i class='bx bx-check'></i>
+              <p>Message successfully sent.</p>
+              <p>Thank you for your message!</p>
+              <button>
+                <div class="close-pop" id="close-pop">Close</div>
+              </button>
+              
+            </div>
+          </div>
+
         </form>
       </section>
     </div>
