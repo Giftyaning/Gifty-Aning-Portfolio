@@ -303,6 +303,38 @@ header {
     width: 100%;
     object-fit: cover;
 }
+
+.tech-skills p{
+    margin-bottom: 0;
+}
+
+.tech-skills ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: .5em;
+    padding: 0 2em;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    font-size: var(--fz-sm);
+    color: var(--light-slate);
+}
+
+.tech-skills li {
+    position: relative; 
+    padding-left: 1.5em; 
+    margin-bottom: 0.5em; 
+    display: flex;
+    align-items: center;
+}
+
+.tech-skills li::before {
+    content: '■';
+    color: var(--green); 
+    position: absolute;
+    left: 0; 
+    top: -.1em ; 
+    font: 0.5em;
+}
 /* End of about styling */
 
 /* Projects Styling */
@@ -591,6 +623,10 @@ form button{
 
     .about-image-resize {
         max-width: 100%;
+    }
+
+    .tech-skills {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
     }
     /* End of about section */
 
