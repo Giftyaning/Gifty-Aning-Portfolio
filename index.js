@@ -1,128 +1,144 @@
-//Navbar section
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header nav a");
+// Navbar section
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("header nav a");
 
-//Contact Section
+// Contact Section
 const form = document.querySelector("form");
-const name = document.getElementById("name");
-const email = document.getElementById("email");
-const message = document.getElementById("message");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+
 
 window.onscroll = () => {
+  const top = window.scrollY;
+
   sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+    const offset = sec.offsetTop - 150;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute("id");
 
     if (top >= offset && top < offset + height) {
       navLinks.forEach((link) => {
         link.classList.remove("active");
-        document
-          .querySelector("header nav a[href*=" + id + "]")
-          .classList.add("active");
       });
+      document
+        .querySelector(`header nav a[href*="${id}"]`)
+        .classList.add("active");
     }
   });
 };
 
-//Animation trigger
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".animate-on-scroll");
+// Animation trigger for sections on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const animatedSections = document.querySelectorAll(".animate-on-scroll");
 
   const observer = new IntersectionObserver(
-    (entries, observer) => {
+    (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("in-view");
-          observer.unobserve(entry.target); // Stop observing once animated
+          observer.unobserve(entry.target);
         }
       });
     },
-    {
-      threshold: 0.1, // Trigger when 10% of the element is visible
-    }
+    { threshold: 0.1 }
   );
 
-  sections.forEach((section) => {
+  animatedSections.forEach((section) => {
     observer.observe(section);
   });
 });
 
-// Hero section animation trigger on load
-window.addEventListener("load", function () {
+// Hero section animation on load
+window.addEventListener("load", () => {
   const heroElements = document.querySelectorAll(
     ".greeting, .name-title, .role-title, .hero-paragraph, .hero-button"
   );
 
-  heroElements.forEach(function (element) {
+  heroElements.forEach((element) => {
     element.classList.add("animate-hero");
-
-    // Ensure the animation class gets activated after load
     setTimeout(() => {
       element.classList.add("in-view");
-    }, 100); // Slight delay to trigger the animation smoothly
+    }, 100);
   });
 });
 
-function checkInputs() {
-  const items = document.querySelectorAll(".item");
+// Send email function
+function sendEmail() {
+  const bodyMessage = `Name: ${nameInput.value}<br> Email: ${emailInput.value}<br> Message: ${messageInput.value}`;
 
-  for (const item of items) {
-    if (item.value == "") {
-      item.classList.add("error");
-      item.parentElement.classList.add("error");
+  Email.send({
+    SecureToken: "43d647d4-e5be-4441-a293-4e857bdff098",
+    To: "giftyaningg@gmail.com",
+    From: "giftyaningg@gmail.com",
+    Subject: `New Message from ${nameInput.value}`,
+    Body: bodyMessage,
+  }).then((response) => {
+    if (response === "OK") {
+      // Show the popup modal
+      document.getElementById("popupModal").style.display = "block";
+    } else {
+      alert(`Failed to send email: ${response}`);
     }
+  });
 
-    if (items[1].value != "") {
-      checkEmail();
-    }
-
-    items[1].addEventListener("keyup", () => {
-      checkEmail();
-    });
-
-    item.addEventListener("keyup", () => {
-      if (item.value != "") {
-        item.classList.remove("error");
-        item.parentElement.classList.remove("error");
-      } else {
-        item.classList.add("error");
-        item.parentElement.classList.add("error");
-      }
-    });
-  }
+  // Close the popup when the close button is clicked
+  document.getElementById("closePopup").onclick = () => {
+    document.getElementById("popupModal").style.display = "none";
+  };
 }
 
+// Check input fields for errors
+function checkInputs() {
+  const inputs = [nameInput, emailInput, messageInput];
+
+  inputs.forEach((input) => {
+    if (input.value.trim() === "") {
+      input.classList.add("error");
+      input.parentElement.classList.add("error");
+    } else {
+      input.classList.remove("error");
+      input.parentElement.classList.remove("error");
+    }
+  });
+
+  checkEmail();
+}
+
+// Validate email format
 function checkEmail() {
-  const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+  const emailRegex = /^[a-z\d._%+-]+@[a-z\d.-]+\.[a-z]{2,}$/i;
   const errorTxtEmail = document.querySelector(".error-txt.email");
 
-  if (!email.value.match(emailRegex)) {
-    email.classList.add("error");
-    email.parentElement.classList.add("error");
+  if (!emailInput.value.match(emailRegex)) {
+    emailInput.classList.add("error");
+    emailInput.parentElement.classList.add("error");
 
-    if (email.value != "") {
-      errorTxtEmail.innerText = "Enter a valid email address";
-    } else {
-      errorTxtEmail = "Email required";
-    }
+    errorTxtEmail.innerText =
+      emailInput.value === ""
+        ? "Email required"
+        : "Enter a valid email address";
   } else {
-    email.classList.remove("error");
-    email.parentElement.classList.remove("error");
+    emailInput.classList.remove("error");
+    emailInput.parentElement.classList.remove("error");
+    errorTxtEmail.innerText = ""; 
   }
 }
 
+// Handle form submission
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkInputs();
 
-  if (
-    !name.classList.contains("error") &&
-    !email.classList.contains("error") &&
-    !message.classList.contains("error")
-  ) {
+  const hasError = Array.from(form.querySelectorAll(".error")).length > 0;
+
+  if (!hasError) {
+    sendEmail(); 
     form.reset();
-    return false;
   }
 });
+
+// Event listeners for real-time validation
+nameInput.addEventListener("keyup", () => checkInputs());
+emailInput.addEventListener("keyup", () => checkInputs());
+messageInput.addEventListener("keyup", () => checkInputs());
