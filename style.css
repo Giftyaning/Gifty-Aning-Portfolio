@@ -33,8 +33,6 @@ html{
     --white: #e6f1ff;
     --green: #64ffda;
     --green-tint: rgba(100, 255, 218, 0.1);
-    --pink: #f57dff;
-    --blue: #57cbff;
     --error-txt: #d93025;
 
     --font-size-lg: clamp(3rem, 8vw, 7rem);
@@ -264,6 +262,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 0;
 }
 
 .hero .greeting{
@@ -409,6 +408,106 @@ header {
 }
 /* End of projects styling */
 
+/* Contact Styling */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--light-slate);
+}
+
+.contact form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+}
+
+form{
+    margin-top: .5em;
+}
+
+.input-box{
+    display: flex;
+    margin-bottom: 1em;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: .2em;
+}
+
+
+.input-box label, .textarea-field label {
+    font-size: 1.2rem;
+    margin-bottom: .7em;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column; 
+    color: var(--light-slate);
+}
+
+.input-box .input-field{
+    width: 48.5%;
+}
+
+.textarea-field{
+    width: 100%;
+    margin-top: -1em;
+    margin-bottom: 1em;
+}
+
+.field .item{
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--green);
+    outline: none;
+    border-radius: 6;
+    color: var(--light-slate);
+}
+
+.field.error .item {
+    border-color: var(--error-txt);
+}
+
+.field.error .error-txt{
+    display: block;
+}
+
+.field .item::placeholder{
+    color: var(--green-tint);
+}
+
+form{
+    padding: .1em 2%;
+}
+
+form .textarea-field .item{
+    resize: none;
+}
+
+form button{
+    margin-top: -5.5em;
+}
+
+
+
+.field .error-txt{
+    color: var(--error-txt);
+    text-align: end;
+    margin-top: .7em;
+    display: none;
+    font-size: 1rem;
+}
+
+
+
+/* End of contact styling */
+
 
 
 
@@ -421,6 +520,10 @@ header {
 }
 
 @media (max-width: 768px) {
+    section{
+        padding: 0 .5em;
+    }
+
     .icons {
         display: inline-flex;
     }
@@ -519,5 +622,20 @@ header {
 
     /* End of projects section */
 
+    /* Contact section */
+    .input-box{
+        flex-wrap: wrap;
+    }
 
+    .input-box .input-field{
+        width: 100%;
+
+    }
+    .input-field{
+        margin-bottom: .3em;
+    }
+    .textarea-field{
+        margin-top: -1.5em;
+    }
+    /* End oc contact section */
 }
