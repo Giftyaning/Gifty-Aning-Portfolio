@@ -333,6 +333,28 @@ header {
 }
 /* End of about styling */
 
+/* Key skills */
+.key-skills{
+    margin-top: .5em;
+    margin-bottom: 0;
+    padding: 0;
+}
+.underline{
+    text-decoration: underline;
+}
+
+.skills-description{
+    display: flex;
+    gap: 2em;
+}
+
+.skill-title{
+    color: var(--green);
+    font-size: var(--fz-lg);
+    margin-bottom: .5em;
+}
+/* End of key skills */
+
 /* Projects Styling */
 .project-list {
     display: block;
@@ -639,8 +661,7 @@ form button{
     /* Hero section */
     .hero{
         justify-content: start;
-        padding-top: 3em;
-        margin-bottom: -2em;
+        
     }
 
     .hero-paragraph{
@@ -664,6 +685,13 @@ form button{
         grid-template-columns: 1fr; 
     }
     /* End of about section */
+
+    /* Key skills */
+    .skills-description{
+        flex-direction: column;
+        gap: .5em;
+    }
+    /* End of key skills */
 
     /* Projects section */
     .project-list{
