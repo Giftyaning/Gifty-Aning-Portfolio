@@ -194,6 +194,10 @@ p{
     padding: 1em 10%;
     z-index: 1000;
     background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
 }
 
 .header::before{
@@ -209,12 +213,7 @@ p{
     z-index: -1;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
+
 
 .logo{
     color: var(--green);
@@ -592,12 +591,39 @@ form button{
   text-decoration: none;
   cursor: pointer;
 }
-
-
-
 /* End of contact styling */
 
+/* Footer styling */
+footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em 10%;
+    z-index: 1000;
+    background-color: transparent;
+    color: var(--light-slate);
+    font-family: var(--font-mono);
+}
 
+.footer-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: .3em;
+}
+
+.footer-content p{
+    margin-bottom: 0;
+}
+
+.social-links{
+    display: flex;
+    margin-top: 0;
+    gap: 3em;
+    color: var(--green);
+}
+/* End of footer styling*/
 
 
 /* BREAKPOINTS */
