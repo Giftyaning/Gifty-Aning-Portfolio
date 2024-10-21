@@ -2,6 +2,7 @@
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav a");
 
+
 // Contact Section
 const form = document.querySelector("form");
 const nameInput = document.getElementById("name");
