@@ -8,6 +8,10 @@ const form = document.querySelector("form");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
+const popup = document.getElementById("more-projects-popup");
+const seeMoreBtn = document.getElementById("project-button");
+const projectClose = document.getElementById("close-pop-btn");
+
 
 window.onscroll = () => {
   const top = window.scrollY;
@@ -62,6 +66,18 @@ window.addEventListener("load", () => {
     }, 100);
   });
 });
+
+// More projects popup
+seeMoreBtn.addEventListener("click", (e) => {
+  e.preventDefault(); 
+  popup.style.display = "block"; 
+});
+
+projectClose.addEventListener("click", (e) => {
+  e.preventDefault(); 
+  popup.style.display = "none"; 
+});
+
 
 // Send email function
 function sendEmail() {

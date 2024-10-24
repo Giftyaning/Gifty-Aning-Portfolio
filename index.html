@@ -194,12 +194,38 @@
             </div>
           </li>
 
-          <button class="project-button">
-            <a href="#">See More</a>
+          <button class="project-button" id="project-button">
+            <a href="">See More</a>
           </button>
-        </ul>
 
-      
+          <div class="more-projects-popup" id="more-projects-popup">
+            <div class="more-projects-content">
+              <div class="more-projects-title">More Projects</div>
+              <ul class="more-projects-list">
+
+                <li class="more-project">
+                  <div class="more-project-content">
+                    <div class="project-title">
+                      <a href="#">Additional Project 1</a>
+                    </div>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <ul class="more-project-tech">
+                      <li>Html</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>React</li>
+                    </ul>
+                  </div>
+                </li>
+                
+                
+              </ul>
+              <button id="close-pop-btn">
+                <div class="close-pop" id="close-pop-btn">Close</div>
+              </button>
+            </div>
+          </div>
+        </ul>
       </section>
 
       <section class="contact animate-on-scroll" id="contact">
@@ -252,9 +278,6 @@
             </textarea>
             <div class="error-txt">Message required</div>
           </div>
-
-          
-        
 
           <button type="submit">Send Message</button>
 
