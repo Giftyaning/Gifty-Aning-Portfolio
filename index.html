@@ -268,8 +268,10 @@
           want to say hello, I'd love to connect.
         </p>
 
-        <form action="#">
+        <form action="https://api.web3forms.com/submit" method="POST">
           <div class="input-box">
+            <input type="hidden" name="access_key" value="184c157f-10ce-4131-bcaa-bc22e839bd0d">
+
             <div class="input-field field">
               <label for="name">Name</label>
               <input
@@ -278,6 +280,7 @@
                 id="name"
                 class="item"
                 autocomplete="off"
+                required
               />
               <div class="error-txt">Name required</div>
             </div>
@@ -287,9 +290,11 @@
               <input
                 type="text"
                 placeholder="Email"
+                name="email"
                 id="email"
                 class="item"
                 autocomplete="off"
+                required
               />
               <div class="error-txt email">Email required</div>
             </div>
@@ -298,14 +303,15 @@
           <div class="textarea-field field">
             <label for="text">Message</label>
             <textarea
-              name=""
+              name="message"
               class="item"
               id="message"
               cols="30"
               rows="10"
               placeholder="Type your message here"
-              autocomplete="off">
-            </textarea>
+              autocomplete="off"
+              required
+              ></textarea>
             <div class="error-txt">Message required</div>
           </div>
 
@@ -350,8 +356,6 @@
       </div>
     </footer>
 
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
