@@ -361,7 +361,7 @@ p{
 /* Projects Styling */
 .project-list {
     display: block;
-    margin-top: 1em
+    margin-top: 1em;
 }
 
 .project {
@@ -370,7 +370,6 @@ p{
     gap: 10px;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    margin-bottom: 1.5em;
 }
 
 .project-content{
@@ -395,17 +394,9 @@ p{
 }
 
 .image-link img{
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    margin: 0;
-    max-width: none;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
     width: 100%;
     object-fit: cover;
+    border-radius: 15%;
 }
 
 .project:nth-child(even) .project-content {
@@ -458,15 +449,19 @@ p{
     gap: 1.2em;
 }
 
+.project-button{
+    display: none;
+}
+
 .more-projects-popup{
     display: none;
-    width: 90%;
+    width: 100%;
     position: fixed;
     z-index: 1000; 
     left: 0;
     top: 3em;
-    background-color: rgba(0, 0, 0);
-    height: 70%;
+    background-color: var(--dark-navy);
+    max-height: 70%;
 }
 
 .more-projects-content{
@@ -800,6 +795,7 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .more-projects-popup{
