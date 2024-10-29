@@ -1,356 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-  <title>Gifty Aning</title>
-</head>
-<body>
-    <header class="header">
+  </head>
+  <body>
+    <!-- Nav bar -->
+    <header class="header" id="header">
       <a href="#" class="logo">G</a>
 
-      <input type="checkbox" id="check">
+      <input type="checkbox" id="check" />
 
       <label for="check" class="icons">
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <i class='bx bx-x' id="close-icon"></i>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
       </label>
 
       <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>        
+        <a href="#home" class="nav_link active-link">Home</a>
+        <a href="#about" class="nav_link">About</a>
+        <a href="#projects" class="nav_link">Projects</a>
+        <a href="#contact" class="nav_link">Contact</a>
+      </nav>
     </header>
 
-    <div class="container">
-      <section class="hero" id="home">
-        <h5 class="greeting">Hello 👋🏾, my name is</h5>
-        <div class="name-title">Gifty Aning</div>
-        <div class="role-title">UI/UX Developer & Front-end Developer</div>
-        <p class="hero-paragraph">
-          I specialize in crafting thoughtful, user-focused designs and writing
-          clean code. Currently, I'm dedicated to building accessible, engaging
-          digital products.
-        </p>
+    <main class="main">
+      <!-- Home Section -->
+      <section class="home" id="home">
+        <div class="home_container container">
+          <h5 class="greeting">Hello 👋🏾, my name is</h5>
+          <div class="name-title">Gifty Aning</div>
+          <div class="role-title">UI/UX Developer & Front-end Developer</div>
+          <p class="hero-paragraph">
+            I specialize in crafting thoughtful, user-focused designs and
+            writing clean code. Currently, I'm dedicated to building accessible,
+            engaging digital products.
+          </p>
 
-        <button class="hero-button">
-          <a href="#contact">Say Hello</a>
-        </button>
+          <button class="hero-button">
+            <a href="#contact">Say Hello</a>
+          </button>
+        </div>
       </section>
 
-      <section id="about" class="animate-on-scroll about">
-        <div class="section-title">
-          <h3>Hi, I'm Gifty. Nice to meet you</h3>
-        </div>
+      <!-- About Section -->
+      <section class="about animate-on-scroll about" id="about">
+        <div class="about_container container">
+          <div class="section-title">
+            <h3>Hi, I'm Gifty. Nice to meet you</h3>
+          </div>
 
-        <div class="about-content">
-          <div class="about-profile">
-            <p class="paragraph">
-              As a self-taught developer, I've immersed myself in the world of
-              design and development, constantly learning and growing along the
-              way. My goal is to bridge the gap between form and function,
-              ensuring that every project I work on is not only beautiful but
-              also user-friendly. With a deep enthusiasm for creativity, I'm
-              always excited to bring ideas to life and craft seamless, engaging
-              experiences for users.
-            </p>
-            <div class="tech-skills">
-              <p>Here are a few technologies I'm familiar with:</p>
-              <ul>
-                <li>Html</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>Figma</li>
-                <li>Adobe xd</li>
-              </ul>
+          <div class="about-content">
+            <div class="about-profile">
+              <p class="paragraph">
+                As a self-taught developer, I've immersed myself in the world of
+                design and development, constantly learning and growing along
+                the way. My goal is to bridge the gap between form and function,
+                ensuring that every project I work on is not only beautiful but
+                also user-friendly. With a deep enthusiasm for creativity, I'm
+                always excited to bring ideas to life and craft seamless,
+                engaging experiences for users.
+              </p>
+              <div class="tech-skills">
+                <p>Here are a few technologies I'm familiar with:</p>
+                <ul>
+                  <li>Html</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                  <li>React</li>
+                  <li>Figma</li>
+                  <li>Adobe xd</li>
+                </ul>
+              </div>
+              <button class="cv">
+                <a href="#">My CV</a>
+              </button>
             </div>
-            <button class="cv">
-              <a href="#">My CV</a>
-            </button>
+            <div class="about-image">
+              <img
+                src="images/girl-coding.png"
+                alt="Coding Girl"
+                class="about-image-resize"
+              />
+            </div>
           </div>
-          <div class="about-image">
-            <img
-              src="images/girl-coding.png"
-              alt="Coding Girl"
-              class="about-image-resize"
-            />
-          </div>
-        </div>
 
-        <div id="key-skills" class="key-skills animate-on-scroll">
+          <div id="key-skills" class="key-skills animate-on-scroll">
             <p class="underline">Key skills</p>
-         
-          <ul class="skills-description">
+
+            <ul class="skills-description">
               <li>
                 <div class="skill-title">
-                  <i class='bx bx-book-content'></i>
+                  <i class="bx bx-book-content"></i>
                   Ux Writing
                 </div>
                 <p>
-                  Creating clear, concise copy that enhances user interaction and guides user flows.
+                  Creating clear, concise copy that enhances user interaction
+                  and guides user flows.
                 </p>
               </li>
               <li>
                 <div class="skill-title">
-                  <i class='bx bxs-color'></i>
+                  <i class="bx bxs-color"></i>
                   Ui/UX Designing
                 </div>
                 <p>
-                  Responsive web development, performance optimization, and accessibility.
+                  Responsive web development, performance optimization, and
+                  accessibility.
                 </p>
               </li>
               <li>
                 <div class="skill-title">
-                  <i class='bx bxl-sketch' ></i>
+                  <i class="bx bxl-sketch"></i>
                   Front-end Development
                 </div>
                 <p>
-                  Responsive web development, performance optimization, and accessibility.
+                  Responsive web development, performance optimization, and
+                  accessibility.
                 </p>
               </li>
             </ul>
           </div>
-      </section>
-
-     
-
-      <section id="projects" class="animate-on-scroll">
-        <div class="section-title">
-          <h3>Projects I've worked on</h3>
         </div>
-
-        <ul class="project-list">
-          <li class="project">
-            <div class="project-content">
-              <div class="project-title">
-                <a href="#">Apple Pay Internationalization</a>
-              </div>
-              <p class="project-description">
-                A concept to enhance Apple Pay for international travelers, 
-                allowing purchases in home currency with a clear breakdown 
-                of conversion fees and charges for transparent transactions abroad.
-              </p>
-              <ul class="project-tech">
-                <li>Figma</li>
-                <li>Wireframing</li>
-                <li>Mockups</li>
-                <li>Notion</li>
-              </ul>
-              <ul class="project-links">
-                <li class="live-site">
-                  <a href="https://www.figma.com/proto/lFKMwvhJi08h1XwXyNwhPN/Apple-Pay-Case-Study?page-id=0%3A1&node-id=8-148&node-type=frame&viewport=94%2C240%2C0.23&t=Yl1ir1rMNXAWWhIy-1&scaling=min-zoom&content-scaling=fixed" target="_blank">
-                    <i class="bx bx-link-external"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="project-image-container">
-              <a href="https://www.figma.com/proto/lFKMwvhJi08h1XwXyNwhPN/Apple-Pay-Case-Study?page-id=0%3A1&node-id=8-148&node-type=frame&viewport=94%2C240%2C0.23&t=Yl1ir1rMNXAWWhIy-1&scaling=min-zoom&content-scaling=fixed" class="image-link" target="_blank">
-                <img src="images/apple.png" alt="" class="project-image" />
-              </a>
-            </div>
-          </li>
-
-          <button class="project-button" id="project-button">
-            <a href="">See More</a>
-          </button>
-
-          <div class="more-projects-popup" id="more-projects-popup">
-            <div class="more-projects-content">
-              <div class="section-title">
-                <h3 class="more-projects-title">More Projects</h3>
-              </div>
-              
-              <ul class="more-projects-list">
-
-                <li class="more-project">
-                  <div class="more-project-content">
-                    <div class="project-title">
-                      <a href="#">Additional Project 1</a>
-                    </div>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                    <ul class="more-project-tech">
-                      <li>Html</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
-                      <li>React</li>
-                    </ul>
-                  </div>
-                </li>
-
-                <li class="more-project">
-                  <div class="more-project-content">
-                    <div class="project-title">
-                      <a href="#">Additional Project 1</a>
-                    </div>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                    <ul class="more-project-tech">
-                      <li>Html</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
-                      <li>React</li>
-                    </ul>
-                  </div>
-                </li>
-
-                <li class="more-project">
-                  <div class="more-project-content">
-                    <div class="project-title">
-                      <a href="#">Additional Project 1</a>
-                    </div>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                    <ul class="more-project-tech">
-                      <li>Html</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
-                      <li>React</li>
-                    </ul>
-                  </div>
-                </li>
-
-                <li class="more-project">
-                  <div class="more-project-content">
-                    <div class="project-title">
-                      <a href="#">Additional Project 1</a>
-                    </div>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                    <ul class="more-project-tech">
-                      <li>Html</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
-                      <li>React</li>
-                    </ul>
-                  </div>
-                </li>
-
-                <li class="more-project">
-                  <div class="more-project-content">
-                    <div class="project-title">
-                      <a href="#">Additional Project 1</a>
-                    </div>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                    <ul class="more-project-tech">
-                      <li>Html</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
-                      <li>React</li>
-                    </ul>
-                  </div>
-                </li>
-
-                 <li class="more-project">
-                  <div class="more-project-content">
-                    <div class="project-title">
-                      <a href="#">Additional Project 1</a>
-                    </div>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                    <ul class="more-project-tech">
-                      <li>Html</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
-                      <li>React</li>
-                    </ul>
-                  </div>
-                </li>
-                
-                
-              </ul>
-              <button id="close-pop-btn">
-                <div class="close-pop" id="close-pop-btn">Close</div>
-              </button>
-            </div>
-          </div>
-        </ul>
       </section>
 
-      <section class="contact animate-on-scroll" id="contact">
-        <div class="section-title">
-          <h3>Get In Touch</h3>
-        </div>
-
-        <p class="section-paragraph">
-          Feel free to reach out! Whether you have a project in mind or just
-          want to say hello, I'd love to connect.
-        </p>
-
-        <form action="https://api.web3forms.com/submit" method="POST">
-          <div class="input-box">
-            <input type="hidden" name="access_key" value="184c157f-10ce-4131-bcaa-bc22e839bd0d">
-
-            <div class="input-field field">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                placeholder="Full Name"
-                id="name"
-                class="item"
-                autocomplete="off"
-                required
-              />
-            </div>
-
-            <div class="input-field field">
-              <label for="email">Email Address</label>
-              <input
-                type="text"
-                placeholder="Email"
-                name="email"
-                id="email"
-                class="item"
-                autocomplete="off"
-                required
-              />
-            </div>
+      <!-- Projects Section -->
+      <section class="projects animate-on-scroll about" id="projects">
+        <div class="projects_container container">
+          <div class="section-title">
+            <h3>Projects I've worked on</h3>
           </div>
 
-          <div class="textarea-field field">
-            <label for="text">Message</label>
-            <textarea
-              name="message"
-              class="item"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Type your message here"
-              autocomplete="off"
-              required
-              ></textarea>
-          </div>
-
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
-
-      <footer class="footer">
-        <div class="footer-content container">
-          <p>Designed & Built by Gifty Aning</p>
-          <ul class="social-links">
-            <li>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <i class='bx bxl-github'></i>
-              </a>
+          <ul class="project-list">
+            <li class="project">
+              <div class="project-content">
+                <div class="project-title">
+                  <a href="#">Apple Pay Internationalization</a>
+                </div>
+                <p class="project-description">
+                  A concept to enhance Apple Pay for international travelers,
+                  allowing purchases in home currency with a clear breakdown of
+                  conversion fees and charges for transparent transactions
+                  abroad.
+                </p>
+                <ul class="project-tech">
+                  <li>Figma</li>
+                  <li>Wireframing</li>
+                  <li>Mockups</li>
+                  <li>Notion</li>
+                </ul>
+                <ul class="project-links">
+                  <li class="live-site">
+                    <a
+                      href="https://www.figma.com/proto/lFKMwvhJi08h1XwXyNwhPN/Apple-Pay-Case-Study?page-id=0%3A1&node-id=8-148&node-type=frame&viewport=94%2C240%2C0.23&t=Yl1ir1rMNXAWWhIy-1&scaling=min-zoom&content-scaling=fixed"
+                      target="_blank"
+                    >
+                      <i class="bx bx-link-external"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="project-image-container">
+                <a
+                  href="https://www.figma.com/proto/lFKMwvhJi08h1XwXyNwhPN/Apple-Pay-Case-Study?page-id=0%3A1&node-id=8-148&node-type=frame&viewport=94%2C240%2C0.23&t=Yl1ir1rMNXAWWhIy-1&scaling=min-zoom&content-scaling=fixed"
+                  class="image-link"
+                  target="_blank"
+                >
+                  <img src="images/apple.png" alt="" class="project-image" />
+                </a>
+              </div>
             </li>
-            <li>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <i class='bx bxl-linkedin'></i>
-              </a>
-            </li>
+
+            <button class="project-button" id="project-button">
+              <a href="">See More</a>
+            </button>
+
+            <div class="more-projects-popup" id="more-projects-popup">
+              <div class="more-projects-content">
+                <div class="section-title">
+                  <h3 class="more-projects-title">More Projects</h3>
+                </div>
+
+                <ul class="more-projects-list">
+                  <li class="more-project">
+                    <div class="more-project-content">
+                      <div class="project-title">
+                        <a href="#">Additional Project 1</a>
+                      </div>
+                      <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <ul class="more-project-tech">
+                        <li>Html</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="more-project">
+                    <div class="more-project-content">
+                      <div class="project-title">
+                        <a href="#">Additional Project 1</a>
+                      </div>
+                      <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <ul class="more-project-tech">
+                        <li>Html</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="more-project">
+                    <div class="more-project-content">
+                      <div class="project-title">
+                        <a href="#">Additional Project 1</a>
+                      </div>
+                      <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <ul class="more-project-tech">
+                        <li>Html</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="more-project">
+                    <div class="more-project-content">
+                      <div class="project-title">
+                        <a href="#">Additional Project 1</a>
+                      </div>
+                      <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <ul class="more-project-tech">
+                        <li>Html</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="more-project">
+                    <div class="more-project-content">
+                      <div class="project-title">
+                        <a href="#">Additional Project 1</a>
+                      </div>
+                      <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <ul class="more-project-tech">
+                        <li>Html</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="more-project">
+                    <div class="more-project-content">
+                      <div class="project-title">
+                        <a href="#">Additional Project 1</a>
+                      </div>
+                      <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <ul class="more-project-tech">
+                        <li>Html</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <button id="close-pop-btn">
+                  <div class="close-pop" id="close-pop-btn">Close</div>
+                </button>
+              </div>
+            </div>
           </ul>
         </div>
-      </footer>
-    </div>
+      </section>
 
-    
+      <!-- Contact Section -->
+      <secton class="contact animate-on-scroll about" id="contact">
+        <div class="contact_container container">
+          <div class="section-title">
+            <h3>Get in touch</h3>
+          </div>
+
+          <p class="section-paragraph">
+            Feel free to reach out! Whether you have a project in mind or just
+            want to say hello, I'd love to connect.
+          </p>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="input-box">
+              <input
+                type="hidden"
+                name="access_key"
+                value="184c157f-10ce-4131-bcaa-bc22e839bd0d"
+              />
+
+              <div class="input-field field">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  id="name"
+                  class="item"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+
+              <div class="input-field field">
+                <label for="email">Email Address</label>
+                <input
+                  type="text"
+                  placeholder="Email"
+                  name="email"
+                  id="email"
+                  class="item"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="textarea-field field">
+              <label for="text">Message</label>
+              <textarea
+                name="message"
+                class="item"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Type your message here"
+                autocomplete="off"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </secton>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+            <a href="#" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Gifty Aning. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

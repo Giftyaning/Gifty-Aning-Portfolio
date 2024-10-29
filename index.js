@@ -6,21 +6,21 @@ const seeMoreBtn = document.getElementById("project-button");
 const projectClose = document.getElementById("close-pop-btn");
 
 //Active navlinks
-container.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
   sections.forEach((section) => {
-    const top = container.scrollTop;
-    const offset = section.offsetTop - container.offsetTop;
+    const top = window.scrollY;
+    const offset = section.offsetTop;
     const height = section.offsetHeight;
     const id = section.getAttribute("id");
 
-    const triggerPoint = 0.2 * container.offsetHeight;
+    const triggerPoint = 0.2 * window.innerHeight;
 
     if (top >= offset - triggerPoint && top < offset + height - triggerPoint) {
       navLinks.forEach((link) => {
-        link.classList.remove("active");
+        link.classList.remove("active-link");
         document
           .querySelector(`header nav a[href*='${id}']`)
-          .classList.add("active");
+          .classList.add("active-link");
       });
     }
   });
