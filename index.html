@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-
-    <title>Gifty Aning</title>
-  </head>
-  <body>
+  <title>Gifty Aning</title>
+</head>
+<body>
     <header class="header">
-      <a href="#" class="logo">Gifty Aning</a>
+      <a href="#" class="logo">G</a>
 
-      <input type="checkbox" id="check" />
+      <input type="checkbox" id="check">
 
       <label for="check" class="icons">
-        <i class="bx bx-menu" id="menu-icon"></i>
-        <i class="bx bx-x" id="close-icon"></i>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
       </label>
 
       <nav class="navbar">
-        <a href="#home" class="active" style="--i: 0">Home</a>
-        <a href="#about" style="--i: 1">About</a>
-        <a href="#projects" style="--i: 2">Projects</a>
-        <a href="#contact" style="--i: 3">Contact</a>
-      </nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>        
     </header>
 
     <div class="container">
@@ -46,7 +45,7 @@
         </button>
       </section>
 
-      <section id="about" class="animate-on-scroll">
+      <section id="about" class="animate-on-scroll about">
         <div class="section-title">
           <h3>Hi, I'm Gifty. Nice to meet you</h3>
         </div>
@@ -79,14 +78,14 @@
           </div>
           <div class="about-image">
             <img
-              src="Images/girl-coding.png"
+              src="images/girl-coding.png"
               alt="Coding Girl"
               class="about-image-resize"
             />
           </div>
         </div>
 
-        <section id="key-skills" class="key-skills animate-on-scroll">
+        <div id="key-skills" class="key-skills animate-on-scroll">
             <p class="underline">Key skills</p>
          
           <ul class="skills-description">
@@ -118,7 +117,7 @@
                 </p>
               </li>
             </ul>
-        </section>
+          </div>
       </section>
 
      
@@ -147,7 +146,7 @@
               </ul>
               <ul class="project-links">
                 <li class="live-site">
-                  <a href="https://www.figma.com/proto/lFKMwvhJi08h1XwXyNwhPN/Apple-Pay-Case-Study?page-id=0%3A1&node-id=8-148&node-type=frame&viewport=94%2C240%2C0.23&t=Yl1ir1rMNXAWWhIy-1&scaling=min-zoom&content-scaling=fixed">
+                  <a href="https://www.figma.com/proto/lFKMwvhJi08h1XwXyNwhPN/Apple-Pay-Case-Study?page-id=0%3A1&node-id=8-148&node-type=frame&viewport=94%2C240%2C0.23&t=Yl1ir1rMNXAWWhIy-1&scaling=min-zoom&content-scaling=fixed" target="_blank">
                     <i class="bx bx-link-external"></i>
                   </a>
                 </li>
@@ -155,12 +154,10 @@
             </div>
             <div class="project-image-container">
               <a href="https://www.figma.com/proto/lFKMwvhJi08h1XwXyNwhPN/Apple-Pay-Case-Study?page-id=0%3A1&node-id=8-148&node-type=frame&viewport=94%2C240%2C0.23&t=Yl1ir1rMNXAWWhIy-1&scaling=min-zoom&content-scaling=fixed" class="image-link" target="_blank">
-                <img src="Images/apple.png" alt="" class="project-image" />
+                <img src="images/apple.png" alt="" class="project-image" />
               </a>
             </div>
           </li>
-
-          
 
           <button class="project-button" id="project-button">
             <a href="">See More</a>
@@ -168,8 +165,56 @@
 
           <div class="more-projects-popup" id="more-projects-popup">
             <div class="more-projects-content">
-              <div class="more-projects-title">More Projects</div>
+              <div class="section-title">
+                <h3 class="more-projects-title">More Projects</h3>
+              </div>
+              
               <ul class="more-projects-list">
+
+                <li class="more-project">
+                  <div class="more-project-content">
+                    <div class="project-title">
+                      <a href="#">Additional Project 1</a>
+                    </div>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <ul class="more-project-tech">
+                      <li>Html</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>React</li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="more-project">
+                  <div class="more-project-content">
+                    <div class="project-title">
+                      <a href="#">Additional Project 1</a>
+                    </div>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <ul class="more-project-tech">
+                      <li>Html</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>React</li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="more-project">
+                  <div class="more-project-content">
+                    <div class="project-title">
+                      <a href="#">Additional Project 1</a>
+                    </div>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <ul class="more-project-tech">
+                      <li>Html</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>React</li>
+                    </ul>
+                  </div>
+                </li>
 
                 <li class="more-project">
                   <div class="more-project-content">
@@ -250,7 +295,6 @@
                 autocomplete="off"
                 required
               />
-              <div class="error-txt">Name required</div>
             </div>
 
             <div class="input-field field">
@@ -264,7 +308,6 @@
                 autocomplete="off"
                 required
               />
-              <div class="error-txt email">Email required</div>
             </div>
           </div>
 
@@ -280,50 +323,33 @@
               autocomplete="off"
               required
               ></textarea>
-            <div class="error-txt">Message required</div>
           </div>
 
           <button type="submit">Send Message</button>
-
-          <div id="popupModal" class="popup-modal">
-            <div class="popup-content">
-              <i class='bx bx-check'></i>
-              <p>Message successfully sent.</p>
-              <p>Thank you for your message!</p>
-              <button>
-                <div class="close-pop" id="close-pop">Close</div>
-              </button>
-              
-            </div>
-          </div>
-
         </form>
       </section>
+
+      <footer class="footer">
+        <div class="footer-content container">
+          <p>Designed & Built by Gifty Aning</p>
+          <ul class="social-links">
+            <li>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-github'></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-linkedin'></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
-    <footer class="footer">
-      <div class="footer-content container">
-        <p>Designed & Built by Gifty Aning</p>
-        <ul class="social-links">
-          <li>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <i class='bx bxl-github'></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i class='bx bxl-linkedin'></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <i class='bx bxl-twitter'></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    
 
     <script src="index.js"></script>
-  </body>
+</body>
 </html>
