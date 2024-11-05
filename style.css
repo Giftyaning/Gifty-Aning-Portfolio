@@ -135,7 +135,6 @@ button {
     animation-delay: 1s;
 }
 
-
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(50px);
@@ -157,6 +156,10 @@ section{
     font-size: var(--fz-sm);
     margin-bottom: 2em;
     padding: 0 2%;
+}
+
+.about, .projects, .contact{
+  margin-bottom: 10em;
 }
 
 /*----- Navbar -----*/
@@ -419,7 +422,6 @@ header {
     display: flex;
     gap: 1.2em;
 }
-
 
 .project-button{
     display: none;
