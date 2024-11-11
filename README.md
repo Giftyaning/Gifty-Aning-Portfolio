@@ -1,40 +1,38 @@
-# Gifty-Aning-Portfolio
-My Portfolio
-Welcome to my personal portfolio! This website showcases my skills, projects, and experiences as a developer. It serves as a platform for potential clients and employers to view my work and connect with me.
+## Welcome to My Portfolio
 
-## Table of Contents
-    -- Introduction
-    -- Features
-    -- Technologies Used
-    -- Setup Instructions
-    -- Contact Information
+Hello! I'm Gifty Aning, a passionate UI/UX Designer & Front-end Developer, dedicated to creating innovative and user-friendly digital experiences. This portfolio showcases my work, skills, and the technologies I use.
 
-## Introduction
-I am Giifty Aning, a Front-End Developer with a passion for creating beautiful and functional web applications. 
-This portfolio highlights my journey, the technologies I use, and the projects I have worked on.
 
-## Features
 
-Responsive Design: The portfolio is fully responsive and adapts to various screen sizes, ensuring an optimal viewing experience on all devices.
+## About This Portfolio
+This website serves as a platform to highlight my projects and professional journey. Each project reflects my commitment to quality and attention to detail, demonstrating my ability to blend functionality with aesthetics.
 
-Animations: Smooth animations enhance user experience, making navigation enjoyable.
 
-Project Showcase: A dedicated section to showcase my projects, complete with descriptions and links.
-
-Contact Form: Easy-to-use contact form for inquiries and collaboration opportunities.
 
 ## Technologies Used
-HTML
-CSS
-JavaScript
+React: For building dynamic user interfaces.
+Bootstrap: For responsive design and layout.
+VS Code: My go-to code editor for development.
 
 
-Contact Information
-I would love to hear from you! You can reach me through:
 
-Email: giftyaningg@gmail.com
-GitHub: Giftyaning
+## Featured Projects
+Explore some of my key projects that showcase my skills:
 
-Feel free to connect with me for collaboration or job opportunities!
+    Estate Website: A user-friendly platform for browsing real estate listings.
+
+    Apple Pay Internationalization: Enhancing the Apple Pay experience for international travelers by enabling purchases in their home currency with transparent conversion fees. 
+
+
+
+## Check Out My Work!
+I invite you to explore my portfolio at www.giftyaning.io (https://www.giftyaning.io). Discover my projects, skills, and the creative solutions I've developed. I look forward to your feedback!
+
+
+
+## Get in Touch
+I’m always open to new opportunities and collaborations. Feel free to reach out via [giftyaningg@gmail.com].
+
+Thank you for visiting my portfolio!
 
 
