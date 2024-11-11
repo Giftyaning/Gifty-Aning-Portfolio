@@ -429,10 +429,9 @@ header {
 
 .more-projects-popup {
     display: none;
-    width: 100%;
+    width: 37%;
     position: absolute;
     z-index: 1000;
-    left: 0;
     top: 5%; 
     background-color: var(--dark-navy);
     max-height: 70%;
