@@ -353,6 +353,7 @@ header {
 .project-content{
     position: relative;
     grid-area: 1 / 1 / -1 / 7;
+    padding: 0 1.5em;
 }
 
 .project-description, .project-tech, .project-links{
@@ -373,6 +374,7 @@ header {
     border-radius: 5%; 
     max-width: 90%; 
 }
+
 
 .project-list{
   display: flex; 
